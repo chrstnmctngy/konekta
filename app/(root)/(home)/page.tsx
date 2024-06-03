@@ -1,10 +1,11 @@
 import MeetingTypeList from '@/components/MeetingTypeList';
+import moment from 'moment-timezone';
 
 const Home = () => {
-  const now = new Date();
+  const now = moment().tz('Asia/Manila');
 
-  const time = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
-  const date = (new Intl.DateTimeFormat('en-US', { dateStyle: 'full' })).format(now);
+  const time = now.format('hh:mm A');
+  const date = now.format('dddd, MMMM D, YYYY');
 
   return (
     <section className="flex size-full flex-col gap-5 text-white">
