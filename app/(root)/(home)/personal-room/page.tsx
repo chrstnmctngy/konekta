@@ -65,7 +65,7 @@ const PersonalRoom = () => {
       </div>
       <div className="flex gap-5">
         <Button className="bg-blue-1" onClick={startRoom}>
-          Start Meeting
+          Start
         </Button>
         <Button
           className="bg-dark-3"
